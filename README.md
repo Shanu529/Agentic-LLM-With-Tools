@@ -18,7 +18,7 @@ This project demonstrates how to build a real LLM Agent that can:
 
 ✅ Groq LLM Integration (llama-3.1-8b-instant)
 
-✅ Tool Calling (Function Calling)
+✅ Function / Tool Calling
 
 ✅ Tavily Real-Time Web Search
 
@@ -28,11 +28,9 @@ This project demonstrates how to build a real LLM Agent that can:
 
 ✅ TypeScript Implementation
 
-✅ Secure .env handling
+✅ Secure .env Handling
 
-
-Architecture
-
+🏗 Architecture
 User Input (CLI)
         │
         ▼
@@ -56,33 +54,54 @@ Groq LLM (Decision Phase)
                 │
                 ▼
            Assistant Output
-
-
-<img width="817" height="375" alt="image" src="https://github.com/user-attachments/assets/f3fce515-3df7-459a-837d-98e0ea6fb3cb" />
-
 ⚙️ Setup Instructions
 1️⃣ Clone Repository
 git clone https://github.com/Shanu529/Agentic-LLM-With-Tools.git
 cd Agentic-LLM-With-Tools
+2️⃣ Install Dependencies
 
-Install all required dependencies for this TypeScript small GenAI project
+Install all required dependencies for this TypeScript GenAI project:
+
 npm install
-
 3️⃣ Create .env File
 
-Create a file named .env in root:
+Create a file named .env in the root directory:
 
 GROQ_API_KEY=your_groq_api_key
 TAVILY_KEY_API=your_tavily_api_key
 
+⚠️ Never push your .env file to GitHub.
 
 4️⃣ Run Development Mode
 npm run dev
-or
+
+OR
+
 npx tsx src/app.ts
+🛠 Tech Stack
 
-
+Groq SDK
 
 Tavily API
 
+TypeScript
+
+Node.js
+
 Readline (CLI Interface)
+
+dotenv
+
+🔄 How It Works
+
+User types input in CLI.
+
+Message is stored in memory.
+
+LLM decides whether to respond directly or call a tool.
+
+If tool is called → Tavily API fetches real-time data.
+
+Tool result is added back into conversation.
+
+LLM generates final intelligent response.
