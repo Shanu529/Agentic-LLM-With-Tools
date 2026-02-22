@@ -52,7 +52,7 @@ Create a file named .env in the root folder and add:
 
 GROQ_API_KEY=your_groq_api_key <br>
 TAVILY_KEY_API=your_tavily_api_key
-4. Run the project
+4. Run the project <br>
 npm run dev
 
 or
