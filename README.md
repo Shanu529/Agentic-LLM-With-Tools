@@ -1,4 +1,4 @@
-Agentic LLM With Tools
+<h2> Agentic LLM With Tools </h2>
 
 This is a simple Agentic AI chatbot built using Groq LLM and Tavily Web Search API.
 
@@ -15,8 +15,6 @@ Run in an interactive CLI environment
 Use environment variables securely
 
 Tech Stack
-
-Node.js
 
 TypeScript
 
@@ -46,13 +44,13 @@ Setup
 1. Clone the repository
 git clone https://github.com/Shanu529/Agentic-LLM-With-Tools.git
 cd Agentic-LLM-With-Tools
-2. Install dependencies
+2. Install All dependencies to run TypeScript
 npm install
 3. Create a .env file
 
 Create a file named .env in the root folder and add:
 
-GROQ_API_KEY=your_groq_api_key
+GROQ_API_KEY=your_groq_api_key <br>
 TAVILY_KEY_API=your_tavily_api_key
 4. Run the project
 npm run dev
