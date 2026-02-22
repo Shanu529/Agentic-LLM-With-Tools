@@ -1,107 +1,64 @@
-🚀 Agentic LLM With Tools
+Agentic LLM With Tools
 
-An Agentic AI Chatbot built using Groq LLM + Tavily Web Search API with dynamic tool-calling capability.
+This is a simple Agentic AI chatbot built using Groq LLM and Tavily Web Search API.
 
-This project demonstrates how to build a real LLM Agent that can:
+The project demonstrates how to build a chatbot that can:
 
-💬 Maintain conversation memory
+Maintain conversation memory
 
-🧠 Switch personalities (Marvel Multiverse Mode)
+Call external tools (Web Search)
 
-🌐 Call external tools (Web Search)
+Handle tool-calling logic correctly
 
-🔄 Handle tool-calling loop correctly
+Run in an interactive CLI environment
 
-🛠 Work in a CLI interactive environment
+Use environment variables securely
 
-🧠 Features
+Tech Stack
 
-✅ Groq LLM Integration (llama-3.1-8b-instant)
+Node.js
 
-✅ Function / Tool Calling
-
-✅ Tavily Real-Time Web Search
-
-✅ Conversation Memory
-
-✅ Interactive CLI Chat
-
-✅ TypeScript Implementation
-
-✅ Secure .env Handling
-
-🏗 Architecture
-User Input (CLI)
-        │
-        ▼
-Conversation Memory (messages[])
-        │
-        ▼
-Groq LLM (Decision Phase)
-        │
-        ├── Direct Response
-        │
-        └── Tool Call (webSearch)
-                │
-                ▼
-           Tavily API
-                │
-                ▼
-        Tool Result Added to Memory
-                │
-                ▼
-        Groq LLM (Final Response Phase)
-                │
-                ▼
-           Assistant Output
-⚙️ Setup Instructions
-1️⃣ Clone Repository
-git clone https://github.com/Shanu529/Agentic-LLM-With-Tools.git
-cd Agentic-LLM-With-Tools
-2️⃣ Install Dependencies
-
-Install all required dependencies for this TypeScript GenAI project:
-
-npm install
-3️⃣ Create .env File
-
-Create a file named .env in the root directory:
-
-GROQ_API_KEY=your_groq_api_key
-TAVILY_KEY_API=your_tavily_api_key
-
-⚠️ Never push your .env file to GitHub.
-
-4️⃣ Run Development Mode
-npm run dev
-
-OR
-
-npx tsx src/app.ts
-🛠 Tech Stack
+TypeScript
 
 Groq SDK
 
 Tavily API
 
-TypeScript
-
-Node.js
-
-Readline (CLI Interface)
-
 dotenv
 
-🔄 How It Works
+Readline (CLI)
 
-User types input in CLI.
+How It Works
 
-Message is stored in memory.
+User enters input in the CLI.
 
-LLM decides whether to respond directly or call a tool.
+The message is stored in memory.
 
-If tool is called → Tavily API fetches real-time data.
+The Groq LLM decides whether to respond directly or call a tool.
 
-Tool result is added back into conversation.
+If needed, the webSearch tool calls Tavily API.
 
-LLM generates final intelligent response.
+The tool result is added back to memory.
+
+The LLM generates the final response.
+
+Setup
+1. Clone the repository
+git clone https://github.com/Shanu529/Agentic-LLM-With-Tools.git
+cd Agentic-LLM-With-Tools
+2. Install dependencies
+npm install
+3. Create a .env file
+
+Create a file named .env in the root folder and add:
+
+GROQ_API_KEY=your_groq_api_key
+TAVILY_KEY_API=your_tavily_api_key
+4. Run the project
+npm run dev
+
+or
+
+npx tsx src/app.ts
+
+This project is built for learning and experimenting with Agentic AI systems and tool-calling in LLMs.
